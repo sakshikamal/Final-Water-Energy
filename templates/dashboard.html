@@ -49,13 +49,13 @@
         <strong>Name:</strong><strong> {{ session['user']['name'] }}</strong><br>
         <strong>Email:</strong><strong>{{ session['user']['email'] }}</strong>
         <br>
-        <strong>Temperature:  </strong><strong>{{ temp }}</strong>
+        <strong>Temperature:  </strong><strong>{{ temp }} degree Celsius</strong>
         <br>
-        <strong>Humidity:  </strong><strong>{{ humid }}</strong>
+        <strong>Humidity:  </strong><strong>{{ humid }}%</strong>
         <br>
-        <strong>Air Quality:  </strong><strong>{{ air }}</strong>
+        <strong>Air Quality:  </strong><strong>{{ air }} PPM</strong>
         <br>
-        <strong>Water Turbidity:  </strong><strong>{{ turb }}</strong>
+        <strong>Water Turbidity:  </strong><strong>{{ turb }} NTU</strong>
 
       </p>
       <div class="center">
@@ -64,7 +64,7 @@
     </div>
   <!-- </div> -->
   <!-- <div  style="width: 300px;"> -->
-    <canvas style="margin-right: 10%;" class ="panel" id="myChart" width="400" height="400"></canvas>
+    <canvas style="margin: 5%;" class ="panel" id="myChart" width="400" height="400"></canvas>
     <canvas class="panel" id="myChart1" width="400" height="400"></canvas>
     
   <!-- </div> -->
