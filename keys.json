@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "water-energy-project",
+  "private_key_id": "933a996e0c645b22a63d1bf3b1f13425074ed7fe",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDGy4rnCEpW25eT\nCm8GTjlW/5NGmU7B2qptOCYQAdzw+FnCkLKVm5vV165XjaeFs36wD/K8NTGhHi3x\npELqV6TfQaxPSCHD5b2ibEHg8FlNrX+uqYnnuXA3yHDb6pjbRDm0RLMMgGZnd+Es\nVpUlXoy0fwl1f2Zrqx/WAt1GJOR5koeeCyCNJmH1NZpXEfDnhXu4gcRilt7kZjrY\n3EaWwrWGQqvJCJRa4LD3+q9WUGW0pF6JX7kzipz/L9rf8tIeuKk2zJSY5g6ba0B1\ntLRTs7f1BSBXCYaNjXUq8xoYrNMCvwFzmFC8N0rmoBbHZqNtluDNkX8VoA1QAJnb\nRas/gpz1AgMBAAECggEALLmRdB4E35rC9MV1qhUCSITyhQEr22hPTIhD4/kPVLWD\nOEdmrksWmdtO8YrApE94UrMb2OUc19Na4dEjbuauBL6ZPjMLya+P5RF3FtzsMpI0\ntj6VdKlfSmWRoqCaqEYmt1x3bfobT+8EHX4TSxeFD3y/S4yQpeuXm4YEc2oMbx83\nRaiJ8CmGVbnbO4nN9xkb/37Go/uYVy5aPkI2dOYgRNQB206v6bbokKIcFIpzaPnq\n4m2/SuC2eNo4UzYypxzpybyH2Kq+rQpQkamM8rM6Ywd5XkuKKwXoxrOrdDfWUOUU\nGEEaDInRFyLzK1ryhC9vd+quMdoEiLFoR2oshObD4QKBgQDq0lfjNJifUZ2mPyQG\nkvWpsoBlzjrAi8OkbbIE7jXo3LnP2bTZzdBibuCEeT/yvsJhU68adyC/TujpTVr9\nX1pN59oDee1wlF4Jvk+JFO2VmKK1+kyTN/ruxEXHAvGioECEHFaSLQXGaFRJ43Bl\nZ3mxwhEAWbUJsuQYe3qIBkrnRQKBgQDYuWdJPo3fiwf3wAXZcDo9S5bQYrd04Cvf\nmWbkFO7yPDvETs+UYakpGfrTGA1wAphU3dM+283/YRM+dpZONaPgobeevQUCEs5e\nXSSxFDc0lAiKb0PvaMYagB9iWTASdx0hTj4IQGwqX+TRkHkEpcMdFgnP+OHmnWYa\n54QpReMh8QKBgC34a9hBDbfy5GgNaGIZFxrXpSdJDltvgSeJihZJBCjIPWAhgLQ7\nBJagmjeU/R3qlmczWM5XkAOj0RkLWcrMhgNGZnnTvtYRVa+WoD9352Mn9IKns6IG\njYt8xSRGwUNTGA5E9fW79qt29TlZ20Ee1sYj9ewZo8V4Tgs08TH7+WH5AoGBANQi\nXqRGE67NMuZh0hftD0SyOZQOHI7NYoSCbkEw8FaxeLsFfZA7K85sfKSltXl/QMZJ\nPx4XHwMrbR/GCgfR32/gO5Coaj+GUvPw7hpatFLF17pRgMjV4JtN7+pfbHuWli/k\nmzmOfZHYvWwXoy1WZ66PxNkKP2xxguEw3p9bpiCxAoGBAI3y1chs2TzDx3jlQXTG\nGv9z34ktNmKIkyYmJ5m4MMR6RvkL2V4TRdrMzrjw/TvVCGbfYHRAnolRJobr3P6G\nfxW5oPfGe8I10PQAEXBqQFKfvhywY2zhpWWY85vW9+Pu7RetHbOxcrCQdFoSfXT+\n+EUiNLPxMqreR5d95m06cCbR\n-----END PRIVATE KEY-----\n",
+  "client_email": "user-972@water-energy-project.iam.gserviceaccount.com",
+  "client_id": "108622719929154571640",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/user-972%40water-energy-project.iam.gserviceaccount.com"
+}
