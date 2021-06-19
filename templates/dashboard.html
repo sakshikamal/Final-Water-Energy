@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Usage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="stylesheet" href="/static/css/app1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<style>
+  body{
+    background:url('https://images.unsplash.com/flagged/photo-1564822110733-14cee2926c52?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTd8fGJhY2tncm91bmQlMjB0ZWFsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  strong{
+    color: white;
+  }
+</style>
+<body>
+
+  <!-- <div> -->
+    <!-- class="card-wrapper" -->
+    <!-- <div class="card">
+
+      <h1 class="center">Dashboard</h1>
+      <p class="center">You are currently logged in.</p>
+
+      <div class="center">
+        <a href="/user/signout" class="btn btn--secondary">Sign Out</a>
+      </div>
+    
+    </div> -->
+    <div class="card">
+      <div class="card-body">
+        This is some text within a card body.
+      </div>
+    </div>
+    <div class="card">
+
+      <h2 class="center" style="color: turquoise;">Your Info:</h2>
+
+      <p style="padding-right: 20px;">
+        <strong>House ID:</strong> <strong>{{ session['user']['house'] }}</strong><br>
+        <strong>Name:</strong><strong> {{ session['user']['name'] }}</strong><br>
+        <strong>Email:</strong><strong>{{ session['user']['email'] }}</strong>
+        <strong>Temperature:  </strong><strong>{{ temp }}</strong>
+        <strong>Humidity:  </strong><strong>{{ humid }}</strong>
+        <strong>Air Quality:  </strong><strong>{{ air }}</strong>
+        <strong>Water Turbidity:  </strong><strong>{{ turb }}</strong>
+
+      </p>
+      <div class="center">
+        <a href="/user/signout" class="btn btn--secondary" style="color: turquoise;">Sign Out</a>
+      </div>
+    </div>
+  <!-- </div> -->
+  <!-- <div  style="width: 300px;"> -->
+    <canvas class="panel" id="myChart" width="400" height="400"></canvas>
+    
+  <!-- </div> -->
+  <p  style="padding-left: 50px; color: white;">For the coming week, your predicted air quality! 
+  </br>
+     Expected Air Quality for the coming week: Rs. {{ bill }}
+  </p>
+    
+      
+    <!-- <div class="panel">
+
+      <img src="/static/images/test.png">
+      <p>For the coming week, your predicted electricity usage!</p>
+
+    </div> -->
+  <!-- </div> -->
+  <script>
+      Chart.defaults.global.responsive = false;
+    var leg='{{ legend }}' + '{{ session['user']['house'] }}'
+   // define the chart data
+   var chartData = {
+     labels : [{% for item in labels %}
+                "{{item}}",
+               {% endfor %}],
+     datasets : [{
+         label: leg,
+         fill: true,
+         lineTension: 0.1,
+        //  backgroundColor: "rgba(75,192,192,0.4)",
+        backgroundColor: "rgba(0,0,0,0)",
+         borderColor: "rgba(75,192,192,1)",
+         borderCapStyle: 'butt',
+         borderDash: [],
+         borderDashOffset: 0.0,
+         borderJoinStyle: 'miter',
+         pointBorderColor: "rgba(75,192,192,1)",
+         pointBackgroundColor: "#fff",
+         pointBorderWidth: 1,
+         pointHoverRadius: 5,
+         pointHoverBackgroundColor: "rgba(75,192,192,1)",
+         pointHoverBorderColor: "rgba(220,220,220,1)",
+         pointHoverBorderWidth: 2,
+         pointRadius: 1,
+         pointHitRadius: 10,
+         data : [{% for item in values %}
+                   {{item}},
+                 {% endfor %}],
+         spanGaps: false
+     }]
+   }
+    
+   // get chart canvas
+   var ctx = document.getElementById("myChart").getContext("2d");
+    
+   // create the chart using the chart canvas
+   var myChart = new Chart(ctx, {
+     type: 'line',
+     data: chartData,
+   });
+  </script>
+</body>
+
+</html>
+    
