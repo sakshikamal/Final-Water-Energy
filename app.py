@@ -56,8 +56,11 @@ for i in values:
   p=p+1
 # print(values)
 
-
 app = Flask(__name__)
+# app = Flask(__name__,
+#             static_url_path='', 
+#             static_folder='static',
+#             template_folder='templates')
 app.secret_key = b'\xcc^\x91\xea\x17-\xd0W\x03\xa7\xf8J0\xac8\xc5'
 
 # # Database
@@ -103,7 +106,10 @@ def signup1():
 def login1():
   return render_template('login.html')
 
-
+@app.route('/profile/')
+@login_required
+def profile():
+  return render_template('profile.html')
 @app.route('/dashboard/')
 @login_required
 def dashboard():
