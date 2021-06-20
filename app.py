@@ -1,5 +1,5 @@
 from __future__ import print_function
-import os.path
+# import os.path
 from googleapiclient.discovery import build
 #from google_auth_oauthlib.flow import InstalledAppFlow
 #from google.auth.transport.requests import Request
@@ -126,6 +126,7 @@ def dashboard():
   from pandas import read_csv
   import pandas as pd
   import datetime
+  from sklearn import metrics
   #loc='csvfiles/House'+house+'.csv'
   # loc='csvfiles/House5.csv'
   # print(loc)
@@ -184,13 +185,14 @@ def dashboard():
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.05)
 
   # Fitting Random Forest Regression to the dataset
+  #air quality
   from sklearn.ensemble import RandomForestRegressor
   model = RandomForestRegressor(n_estimators = 10, random_state = 0)
   model.fit(X_train.reshape(-1,1), y_train.reshape(-1,1))
 
   y_pred = model.predict(X_test.reshape(-1,1))
   y_pred.reshape(-1)
-  print(y_pred)
+  # print(y_pred)
 
   import numpy as np
   import matplotlib.pyplot as plt
@@ -205,7 +207,9 @@ def dashboard():
   print(y_pred)
 
   print(y_test)
-
+  print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
+  print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
+  print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
   day1=y_pred[0]
   day2=y_pred[1]
   day3=y_pred[2]
