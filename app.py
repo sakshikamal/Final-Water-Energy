@@ -348,3 +348,5 @@ def dashboard():
 #   return render_template('dashboard.html', labels=days, values=week, bill=bill,legend=legend,temp=temp, humid=humid, air=air, turb=turb)
 #   # return render_template("update.html", data=data)
 # # app.run(host='0.0.0.0', port= 8090)
+if __name__ == '__main__':
+    app.run()
