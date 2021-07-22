@@ -56,11 +56,11 @@ for i in values:
   p=p+1
 # print(values)
 
-app = Flask(__name__)
-# app = Flask(__name__,
-#             static_url_path='', 
-#             static_folder='static',
-#             template_folder='templates')
+# app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='', 
+            static_folder='static',
+            template_folder='templates')
 app.secret_key = b'\xcc^\x91\xea\x17-\xd0W\x03\xa7\xf8J0\xac8\xc5'
 
 # # Database
@@ -127,6 +127,7 @@ def dashboard():
   import pandas as pd
   import datetime
   from sklearn import metrics
+  import pickle
   #loc='csvfiles/House'+house+'.csv'
   # loc='csvfiles/House5.csv'
   # print(loc)
@@ -185,15 +186,26 @@ def dashboard():
   from sklearn.model_selection import train_test_split
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.05)
 
-  # Fitting Random Forest Regression to the dataset
-  #air quality
-  from sklearn.ensemble import RandomForestRegressor
-  model = RandomForestRegressor(n_estimators = 10, random_state = 0)
-  model.fit(X_train.reshape(-1,1), y_train.reshape(-1,1))
+  # # Fitting Random Forest Regression to the dataset
+  # #air quality
+  # from sklearn.ensemble import RandomForestRegressor
+  # model = RandomForestRegressor(n_estimators = 10, random_state = 0)
+  # model.fit(X_train.reshape(-1,1), y_train.reshape(-1,1))
+  
+  # #save the model
+  filename_air = 'finalized_model_air.sav'
+  # pickle.dump(model, open(filename_air, 'wb'))
+  # y_pred = model.predict(X_test.reshape(-1,1))
+  # y_pred.reshape(-1)
+  # # print(y_pred)
 
-  y_pred = model.predict(X_test.reshape(-1,1))
+  #check how model performs
+  loaded_model = pickle.load(open(filename_air, 'rb'))
+  #result = loaded_model.score(X_test, y_test)
+  #print(result)
+  y_pred = loaded_model.predict(X_test.reshape(-1,1))
   y_pred.reshape(-1)
-  # print(y_pred)
+  print(y_pred)
 
   import numpy as np
   import matplotlib.pyplot as plt
@@ -231,11 +243,15 @@ def dashboard():
   model = RandomForestRegressor(n_estimators = 10, random_state = 0)
   model.fit(X1_train.reshape(-1,1), y1_train.reshape(-1,1))
 
-  y1_pred = model.predict(X1_test.reshape(-1,1))
+  filename_water = 'finalized_model_water.sav'
+  #pickle.dump(model, open(filename_water, 'wb'))
+
+  loaded_model = pickle.load(open(filename_water, 'rb'))
+  y1_pred =loaded_model.predict(X1_test.reshape(-1,1))
   y1_pred.reshape(-1)
   print(y1_pred)
 
-  print(y1_pred)
+  #print(y1_pred)
 
   print(y1_test)
 
@@ -251,6 +267,7 @@ def dashboard():
   days = ['sun', 'mon', 'tue', 'wed', 'thr', 'fri', 'sat']
   #pyplot.plot(days, week)
   #pyplot.show()
+ 
 
   exp_bill=[week[0],week[1],week[2],week[3],week[4],week[5],week[6]]
   legend="Air Quality for House "
