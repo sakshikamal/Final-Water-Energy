@@ -165,7 +165,8 @@ def dashboard():
   df1 = df1.iloc[1:]
   #df1['Datetime']=pd.to_datetime(df1['Dateee'] + ' ' + df1['Time'])
   #df1['Datetime']=df1['Dateee']+' '+ df1['Time']
-  df1['Datetime']=pd.to_datetime(df1['Date'], errors='ignore')
+  #df1['Datetime']=pd.to_datetime(df1['Date'], errors='ignore')
+  df1['Datetime']=df1['Date'].astype('datetime64[ns]')
   df1['Air Quality'] = df1['Air Quality'].apply(pd.to_numeric, errors='coerce')
   df1['Turbidity'] = df1['Turbidity'].apply(pd.to_numeric, errors='coerce')
   df1= df1.dropna()
