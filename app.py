@@ -56,11 +56,11 @@ for i in values:
   p=p+1
 # print(values)
 
-# app = Flask(__name__)
-app = Flask(__name__,
-            static_url_path='', 
-            static_folder='static',
-            template_folder='templates')
+app = Flask(__name__)
+# app = Flask(__name__,
+#             static_url_path='', 
+#             static_folder='static',
+#             template_folder='templates')
 app.secret_key = b'\xcc^\x91\xea\x17-\xd0W\x03\xa7\xf8J0\xac8\xc5'
 
 # # Database
