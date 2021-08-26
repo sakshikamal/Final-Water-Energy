@@ -90,7 +90,7 @@ canvas{
             </li>
             <li class="nav-item ">
               <a class="nav-link" href="/user/signout">
-                <i class="material-icons">human</i>
+                <!-- <i class="material-icons">human</i> -->
                 <p>Signout</p>
               </a>
             </li>
@@ -156,7 +156,7 @@ canvas{
                       <i class="material-icons">content_copy</i>
                     </div>
                     <p class="card-category">Click to generate</p>
-                    <h3 class="card-title">Report</h3>
+                    <h3 class="card-title" onclick="window.print()">Report</h3>
                     
                     </h3>
                   </div>
@@ -310,6 +310,244 @@ canvas{
           </div> -->
           <!-- </div> -->
           <!-- <div  style="width: 300px;"> -->
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header card-header-primary">
+                      <h4 class="card-title ">Predicted Air Q</h4>
+                      <p class="card-category">Your air quality values for the upcoming days of the week!</p>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead class=" text-primary">
+                            <th>
+                              Day
+                            </th>
+                            <th>
+                              AQI
+                            </th>
+                          </thead>
+                          <tbody>
+                            <tr>
+
+                                
+                              <td>
+                              {{labels[0]}}
+                              </td>
+                             
+                              <td>
+                              {{values[0]}}
+                            </td>
+                           
+                          </tr>
+                          <tr>  <tr>
+
+                              
+                            <td>
+                            {{labels[1]}}
+                            </td>
+                           
+                            <td>
+                            {{values[1]}}
+                          </td>
+                         
+                        </tr>
+
+                        <tr>
+
+                              
+                          <td>
+                          {{labels[2]}}
+                          </td>
+                         
+                          <td>
+                          {{values[2]}}
+                        </td>
+                       
+                      </tr>
+
+                      <tr>
+
+                              
+                        <td>
+                        {{labels[3]}}
+                        </td>
+                       
+                        <td>
+                        {{values[3]}}
+                      </td>
+                     
+                    </tr>
+
+                    <tr>
+
+                              
+                      <td>
+                      {{labels[4]}}
+                      </td>
+                     
+                      <td>
+                      {{values[4]}}
+                    </td>
+                   
+                  </tr>
+
+                  <tr>
+
+                              
+                    <td>
+                    {{labels[5]}}
+                    </td>
+                   
+                    <td>
+                    {{values[5]}}
+                  </td>
+                 
+                </tr>
+
+                <tr>
+
+                              
+                  <td>
+                  {{labels[6]}}
+                  </td>
+                 
+                  <td>
+                  {{values[6]}}
+                </td>
+               
+              </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header card-header-primary">
+                      <h4 class="card-title ">Predicted Water Quality</h4>
+                      <p class="card-category">Your water quality values for the upcoming days of the week!</p>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead class=" text-primary">
+                            <th>
+                              Day
+                            </th>
+                            <th>
+                              Turbidty in NTU
+                            </th>
+                          </thead>
+                          <tbody>
+                            <tr>
+
+                                
+                                <td>
+                                {{labels[0]}}
+                                </td>
+                               
+                                <td>
+                                {{values1[0]}}
+                              </td>
+                             
+                            </tr>
+                            <tr>  <tr>
+
+                                
+                              <td>
+                              {{labels[1]}}
+                              </td>
+                             
+                              <td>
+                              {{values1[1]}}
+                            </td>
+                           
+                          </tr>
+
+                          <tr>
+
+                                
+                            <td>
+                            {{labels[2]}}
+                            </td>
+                           
+                            <td>
+                            {{values1[2]}}
+                          </td>
+                         
+                        </tr>
+
+                        <tr>
+
+                                
+                          <td>
+                          {{labels[3]}}
+                          </td>
+                         
+                          <td>
+                          {{values1[3]}}
+                        </td>
+                       
+                      </tr>
+
+                      <tr>
+
+                                
+                        <td>
+                        {{labels[4]}}
+                        </td>
+                       
+                        <td>
+                        {{values1[4]}}
+                      </td>
+                     
+                    </tr>
+
+                    <tr>
+
+                                
+                      <td>
+                      {{labels[5]}}
+                      </td>
+                     
+                      <td>
+                      {{values1[5]}}
+                    </td>
+                   
+                  </tr>
+
+                  <tr>
+
+                                
+                    <td>
+                    {{labels[6]}}
+                    </td>
+                   
+                    <td>
+                    {{values1[6]}}
+                  </td>
+                 
+                </tr>
+
+                                
+                             
+                      
+
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6">
                   <canvas style="margin: 5%; width: 90%;" class ="panel" id="myChart" width="800" height="800"></canvas>
